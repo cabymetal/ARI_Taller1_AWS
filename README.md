@@ -59,7 +59,7 @@ La estructura propuesta para el amacenamiento de archivos será la siguiente:
 |	|	|	|-- TRM
 
 ```
-##CREACIÓN DE BUCKETS
+## CREACIÓN DE BUCKETS
 Se puede realizar desde la interfaz web pero también desde la consola de comandos de la forma:<br>
 ```
 ws s3 mb s3://<nombre_bucket>/<folder>
@@ -71,7 +71,7 @@ aws s3 mb s3://cmurill5curated/
 ```
 Estas operaciones tambien las podemos ejecutar desde la interfaz web
 
-##ELIMINAR DE BUCKETS
+## ELIMINAR DE BUCKETS
 Podemos eliminar una carpeta de la siguiente manera
 ```
 aws s3 rb s3://cmurill5curated/ --force 
