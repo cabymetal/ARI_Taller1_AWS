@@ -2,6 +2,7 @@
 
 ##SISTEMA DE ARCHIVOS
 La estructura propuesta para el amacenamiento de archivos será la siguiente:
+```
 /
 |-- `cmurill5raw`
 |	|-- `global`
@@ -56,7 +57,7 @@ La estructura propuesta para el amacenamiento de archivos será la siguiente:
 |	|	|	|-- NON_STRUCTURED_DATA
 |	|	|--`Covidvsenviroment`
 |	|	|	|-- TRM
-
+```
 
 ##CREACIÓN DE BUCKETS
 Se puede realizar desde la interfaz web pero también desde la consola de comandos de la forma:<br>
@@ -101,12 +102,12 @@ se crean varios crawlers (rastreadores) entre ellos
 Crawler que se encarga de las tablas de datasets de COVID y genera una tabla con los datos particionados que contienen la información 
 de recuperados muertos y fallecidos:
 
-![Covid Table](covid_cases_table.png)
+![Covid Table](covid_cases_table.PNG)
 
 ####  Eco_oil_table y SANDP_crawl
 Este rastreador se encarga de generar tablas de variables económicas de comprotamiento del petróleo y de Standard and Pull en tablas separadas.
 Se realiza de esta manera porque serán insumo para un rastreador que las llevara de la zona raw a producción
-![Economic raw Tables](economic_tables.png)
+![Economic raw Tables](economic_tables.PNG)
 
 #### covid_curated
 
@@ -123,13 +124,13 @@ Los trabajos en su mayoría fueron realizados en `AWS Glue` se mostrarán tres t
 ## Trabajo por interfaz gráfica
 El trabajo `job_covid_curator` que se menciona en la sección anterior, toma los datos de zona raw y los lleva a zona curated
 cambiando algunos nombres de columnas y filtrando o eliminando otras:
-![covid curator bfore transformation](job_covid_curator.png)
+![covid curator bfore transformation](job_covid_curator.PNG)
 
 ## Trabajo Python Spark utilizando Glue
 El trabajo `merge_economic_vars` permite tomar las variables econmicas y aplicarles una operación de fusionar tablas para crear una 
 única tabla en la zona curated. Este script se puede observar en detalle en `glue_merge_tables_automatic_script.py`
 
-![Script Automático](Glue_auto_script.png)
+![Script Automático](Glue_auto_script.PNG)
 
 ## Trabajo Python Spark utilizando script propio
 
