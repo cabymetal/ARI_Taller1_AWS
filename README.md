@@ -1,6 +1,6 @@
-#ESTRUCTURA DE ARCHIVOS EN S3
+# ESTRUCTURA DE ARCHIVOS EN S3
 
-##SISTEMA DE ARCHIVOS
+## SISTEMA DE ARCHIVOS
 La estructura propuesta para el amacenamiento de archivos será la siguiente:
 ```
 /
