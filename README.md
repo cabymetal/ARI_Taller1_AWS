@@ -2,6 +2,7 @@
 
 ##SISTEMA DE ARCHIVOS
 La estructura propuesta para el amacenamiento de archivos será la siguiente:
+```
 /
 |-- `cmurill5raw`
 |	|-- `global`
@@ -57,10 +58,12 @@ La estructura propuesta para el amacenamiento de archivos será la siguiente:
 |	|	|--`Covidvsenviroment`
 |	|	|	|-- TRM
 
-
+```
 ##CREACIÓN DE BUCKETS
 Se puede realizar desde la interfaz web pero también desde la consola de comandos de la forma:<br>
-<center>`aws s3 mb s3://<nombre_bucket>/<folder>`</center>
+```
+ws s3 mb s3://<nombre_bucket>/<folder>
+```
 
 luego para crear la carpeta `cmurill5curated` ejecutamos:
 ```
@@ -132,4 +135,16 @@ El trabajo `merge_economic_vars` permite tomar las variables econmicas y aplicar
 ![Script Automático](Glue_auto_script.png)
 
 ## Trabajo Python Spark utilizando script propio
+El trabajo `job_covid_vs_economic` toma datos de tablas de covid ya creadas y las cruza con la información de variables economicas preparada en pasos 
+anteriores que permite que se puedan ver en producción se puede observar el código en `glue_merge_rename_df_manual_script.py`
 
+![crawl to production](Job_covid_vs_economic.PNG)
+
+Una vez finalizado podemos observar los resultados en:
+
+![crawl finished](curated_to_production.PNG)
+
+# Publicar resultados en producción
+Al final el crawler que se ejecuta crea un archivo parquet en la zona de producción
+
+![crawl finished](results_in_prod.PNG)
