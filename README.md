@@ -4,7 +4,7 @@ Este proyecto representa de manera resumida la arquitectura de u proceso de mont
 exponiendo diferentes fases: almacenamiento procesamiento y paso a producción creación de bases de datos para
 que sean de apoyo al negocio a futuro.
 
-![Architecture](Images/AWSarch.png)
+![Architecture](Images/AWSArch.png)
 
 
 # ESTRUCTURA DE ARCHIVOS EN S3
